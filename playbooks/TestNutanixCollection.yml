@@ -1,0 +1,12 @@
+---
+- name: Test Nutanix Collection
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: Test Nutanix module
+      nutanix.ncp.ntnx_clusters_info:
+        nutanix_host: "1.1.1.1"
+        nutanix_username: "test"
+        nutanix_password: "test"
+        validate_certs: false
