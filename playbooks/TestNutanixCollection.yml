@@ -1,12 +1,12 @@
 ---
-- name: Test Nutanix Collection
+- name: Test Nutanix
   hosts: localhost
   gather_facts: false
 
   tasks:
-    - name: Test Nutanix module
+    - name: Get Cluster Information
       nutanix.ncp.ntnx_clusters_info:
-        nutanix_host: "1.1.1.1"
-        nutanix_username: "test"
-        nutanix_password: "test"
+        nutanix_host: "{{ nutanix_host }}"
+        nutanix_username: "{{ nutanix_username }}"
+        nutanix_password: "{{ nutanix_password }}"
         validate_certs: false
